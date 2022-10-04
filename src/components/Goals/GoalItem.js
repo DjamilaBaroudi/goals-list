@@ -19,11 +19,12 @@ const GoalItem = props => {
 
     return (
         <div className="goal-item">
-            <button
-                key={props.id}
-                onClick={deleteContentHandler}>
-                {props.content}
-            </button>
+            {props.content.trim() &&
+                <button
+                    key={props.id}
+                    onClick={deleteContentHandler}>
+                    {props.content}
+                </button>}
         </div>
 
     )
