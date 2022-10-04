@@ -1,0 +1,20 @@
+.goals-form{
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-color: #FBCB0A;
+    width: 40%;
+    margin: 4% 0 2% 0;
+    border-style: solid;
+    padding: 3rem;
+    
+}
+.goals-form__items{
+    padding: 4rem;
+    margin-top: 2rem;
+}
+.goals-form button{
+    background-color: #ec2675;
+    width:  8rem;
+    height: 2rem;
+}
