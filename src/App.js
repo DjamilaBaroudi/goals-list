@@ -20,11 +20,15 @@ function App() {
   const addNewGoalHandler = newGoal => {
     setNewGoalsList((prev) => [newGoal, ...prev])
   }
+  const deleteGoalHandler = goalToDelete => {
+    setNewGoalsList((prev) =>
+      (prev.filter(goal => goal.id !== goalToDelete.id)));
+  }
 
   return (
     <div className="wrapper">
       <NewGoalForm onAddNewGoal={addNewGoalHandler} />
-      <GoalsList goalsList={newGoalsList} />
+      <GoalsList goalsList={newGoalsList} onDelete={deleteGoalHandler} />
     </div>
   );
 }

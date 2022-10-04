@@ -16,6 +16,7 @@ const NewGoalForm = props => {
             id: Math.random(), 
             content : value,
         }
+        console.log(goal);
         props.onAddNewGoal(goal);
         setValue('');
     }
