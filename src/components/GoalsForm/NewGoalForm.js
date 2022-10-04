@@ -6,15 +6,21 @@ import './NewGoalForm.css';
 const NewGoalForm = props => {
     const [value, setValue] = React.useState('');
 
-    const handleChange = (event) => {
-        setValue(event.target.value);
+    const handleChange = (e) => {
+        setValue(e.target.value);
     };
 
     const addNewGoal = (e) => {
-        e.preventDafault();
-        let newGoal = e.target.value;
-        props.goalsList.push(newGoal);
+        e.preventDefault();
+        let goal = {
+            id: Math.random(), 
+            content : value,
+        }
+        props.onAddNewGoal(goal);
+        setValue('');
     }
+    //console.log(value);
+    
     return (
         <div className="goals-form">
             <form onSubmit={addNewGoal}>
